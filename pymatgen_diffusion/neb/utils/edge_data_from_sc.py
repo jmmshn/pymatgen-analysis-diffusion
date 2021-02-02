@@ -74,7 +74,7 @@ def get_uc_pos(
     uc_epos = li_pos.dot(sc_m)
     uc_epos = uc_epos - image_trans
     uc_epos = _get_first_close_site(uc_epos, uc)
-    
+
     msite = PeriodicSite(
         esite.specie,
         (uc_ipos + uc_epos) / 2,
@@ -82,7 +82,7 @@ def get_uc_pos(
     )
     li_pos = msite.frac_coords
     uc_mpos = li_pos
- 
+
     p0 = PeriodicSite(isite.specie, uc_ipos, uc.lattice)
     p1 = PeriodicSite(esite.specie, uc_mpos, uc.lattice)
     p2 = PeriodicSite(esite.specie, uc_epos, uc.lattice)
@@ -151,7 +151,7 @@ def get_unique_hop(
         # if v['hop'] == mg_from_sc:
         #     print('Matched old way')
         #     result.append(k)
-   
+
     if len(result) > 1:
         raise ValueError("Too many matches between UC and SC")
     if len(result) == 0:
