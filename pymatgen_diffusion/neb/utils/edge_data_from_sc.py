@@ -67,7 +67,7 @@ def get_uc_pos(
     uc_ipos = li_pos.dot(sc_m)
     image_trans = np.floor(uc_ipos)
     uc_ipos = uc_ipos - image_trans
-    uc_ipos = _get_first_close_site(uc_ipos, uc) 
+    uc_ipos = _get_first_close_site(uc_ipos, uc)
 
     li_pos = esite.frac_coords
     li_pos = li_pos - total_t
