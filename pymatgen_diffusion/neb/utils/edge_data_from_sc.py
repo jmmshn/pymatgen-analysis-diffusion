@@ -39,7 +39,7 @@ def add_edge_data_from_sc(fpm, i_sc, e_sc, data_array, key='custom_key'):
     fpm.add_data_to_similar_edges(target_label=uhop_index, data=add_dict)
 
 
-#the functions below are taken from repo cath_scripts by Jimmy Shen
+# the functions below are taken from repo cath_scripts by Jimmy Shen
 
 
 def get_uc_pos(
@@ -89,7 +89,7 @@ def get_uc_pos(
     return p0, p1, p2
 
 
-def _get_first_close_site(frac_coord, structure, stol = 0.1):
+def _get_first_close_site(frac_coord, structure, stol=0.1):
     for site in structure.sites:
         dist, image = structure.lattice.get_distance_and_image(frac_coord, site.frac_coords)
         if dist < stol:
